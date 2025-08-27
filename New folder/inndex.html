@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JoeWeb — Joel’s Tech & Care Journey</title>
+  <meta name="description" content="Joel Onarinde — IT admin, creator, and community builder documenting the journey from the UK to Canada." />
+  <style>
+    /* Minimal inline styles so the page looks tidy before you add CSS later */
+    :root { --maxw: 980px; --pad: 1rem; --bg: #0f172a; --ink: #0b1324; --brand: #e11d48; --muted: #6b7280; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height: 1.6; color: #111; }
+    header { background: linear-gradient(135deg, #111827, #0b1324 60%); color: #fff; padding: 4rem 1rem 3rem; }
+    header .inner, main, footer .inner { max-width: var(--maxw); margin: 0 auto; }
+    nav { position: sticky; top: 0; background: #ffffffee; border-bottom: 1px solid #e5e7eb; backdrop-filter: blur(6px); z-index: 10; }
+    nav .inner { display: flex; gap: 1rem; align-items: center; max-width: var(--maxw); margin: 0 auto; padding: .5rem var(--pad); }
+    nav a { text-decoration: none; color: #111; padding: .5rem .75rem; border-radius: .5rem; }
+    nav a:hover, nav a:focus { background: #f3f4f6; }
+    .btn { display: inline-block; background: var(--brand); color: #fff; padding: .75rem 1rem; border-radius: .75rem; text-decoration: none; }
+    .muted { color: var(--muted); }
+    section { padding: 3rem var(--pad); }
+    section .inner { max-width: var(--maxw); margin: 0 auto; }
+    .grid { display: grid; gap: 1rem; }
+    .grid-3 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    figure { margin: 0; border: 1px solid #e5e7eb; border-radius: .75rem; overflow: hidden; background: #fff; }
+    figure img { width: 100%; display: block; }
+    figure figcaption { padding: .75rem; font-size: .9rem; color: #374151; }
+    form { display: grid; gap: 1rem; max-width: 680px; }
+    label { font-weight: 600; }
+    input, textarea { width: 100%; padding: .75rem; border: 1px solid #e5e7eb; border-radius: .5rem; font: inherit; }
+    iframe { width: 100%; aspect-ratio: 16/9; border: none; border-radius: .75rem; }
+    footer { background: #f8fafc; padding: 2.5rem var(--pad); border-top: 1px solid #e5e7eb; }
+    small a { color: inherit; }
+    /* VISUAL HIGHLIGHT for photo placeholders */
+    .placeholder {
+      outline: 3px dashed #e11d48; outline-offset: 6px; position: relative;
+    }
+    .placeholder::after {
+      content: " REPLACE WITH YOUR PHOTO (see steps below) ";
+      position: absolute; inset: auto 0 0 0; background: #e11d48; color: white;
+      font-size: .8rem; text-align: center; padding: .25rem .5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV with bookmarks -->
+  <nav aria-label="Primary">
+    <div class="inner">
+      <strong>JoeWeb</strong>
+      <a href="#home">Home</a>
+      <a href="#gallery">Photos</a>
+      <a href="#video">Video</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO / HOME -->
+  <header id="home" role="banner">
+    <div class="inner">
+      <h1>Hi, I’m Joel — IT Admin, Creator & Community-minded Storyteller</h1>
+      <p class="muted">
+        I keep systems running at Amethyst Care & Support Group, build websites, craft visuals,
+        and I’m charting a family move from the UK to Canada. Welcome to my one-page hub.
+      </p>
+      <p><a class="btn" href="#contact">Work with me</a></p>
+    </div>
+  </header>
+
+  <main id="content">
+
+    <!-- ABOUT / HOME SECTION TEXT -->
+    <section aria-labelledby="about-title">
+      <div class="inner">
+        <h2 id="about-title">What I’m About</h2>
+        <p>
+          I love blending reliable IT operations with clear, human-centred communication.
+          From deploying devices and cleaning malware to designing logos and writing stories about
+          tenant milestones — I bring order and creativity together.
+        </p>
+        <ul>
+          <li>IT Administration (Microsoft 365, device lifecycle, support)</li>
+          <li>Web & Content (HTML/CSS/JS, WordPress, graphics, short videos)</li>
+          <li>Projects in motion: <em>Relationship Rader</em>, <em>Grooving to Motown</em>, and our Canada move.</li>
+        </ul>
+      </div>
+    </section>
+
+   
+
+    <!-- VIDEO (IFRAME) -->
+    <section id="video" aria-labelledby="video-title">
+      <div class="inner">
+        <h2 id="video-title">Featured Video</h2>
+        <p class="muted">No Video to showcase this time.</p>
+
+        <!-- Replace the src with your own video URL -->
+        <iframe
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          title="Featured video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
+
+    <!-- CONTACT FORM -->
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="inner">
+        <h2 id="contact-title">Contact Joel</h2>
+        <p class="muted">Drop me a note about IT support, web work, or collaborations.</p>
+
+        <form action="#" method="post">
+          <div>
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+
+          <div>
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+          </div>
+
+          <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" placeholder="Tell me what you have in mind…" required></textarea>
+          </div>
+
+          <button class="btn" type="submit">Send message</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <div class="inner">
+      <p><strong>JoeWeb</strong> — Joel’s Tech & Care Journey</p>
+      <small class="muted">
+        © <span id="year"></span> Joel Onarinde. All rights reserved.
+        · <a href="#home">Back to top</a>
+      </small>
+    </div>
+    <script>
+      // tiny helper to keep the year current
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+
+</body>
+</html>
