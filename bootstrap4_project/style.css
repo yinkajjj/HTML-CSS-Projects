@@ -1,0 +1,10 @@
+:root{ --brand:#e11d48; --ink:#0b1324; }
+.hero-bg{ background: linear-gradient(135deg, rgba(11,19,36,.85), rgba(225,29,72,.65)), url('https://images.unsplash.com/photo-1526948128573-703ee1aeb6fa?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat; }
+h1,h2,h3,h4{ color:#0b1324; }
+.hero-bg h1, .hero-bg .lead{ color:#fff; }
+.card{ border:0; }
+.card-img-top{ object-fit:cover; height:220px; }
+.card-title{ color:#0b1324; }
+.btn-primary{ background: var(--brand); border-color: var(--brand); }
+.btn-primary:hover{ filter: brightness(.92); }
+footer a{ color: inherit; text-decoration: underline; }
