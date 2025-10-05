@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--Head-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Joel Onarinde</title>
+    <meta name="description" content="Joel Onarinde — IT admin & creator. Portfolio with About, GitHub, Video, and Contact." />
+    <!-- Beautiful font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="portfolio.css" />
+  </head>
+
+  <!--Body-->
+  <body class="Background">
+    <!--Navbar-->
+    <div class="Navbar">
+      <div class="Nav__inner">
+        <a class="brand" href="#Home">Joel<span class="accent">Onarinde</span></a>
+        <nav class="Nav__links" aria-label="Primary">
+          <a class="active" href="#Home">Home</a>
+          <a href="#About">About</a>
+          <a href="#GitHub">GitHub</a>
+          <a href="#Video">Video</a>
+          <a href="#Contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+
+    <!--Background image/video hero-->
+    <header id="Home" class="Hero">
+      <!-- If you add img/hero.mp4 later, it will play; otherwise the poster shows -->
+      <video autoplay muted loop id="Typing_Video" playsinline poster="./img/community-moment.jpg">
+        <source src="./img/hero.mp4" type="video/mp4" />
+      </video>
+      <div class="overlay"></div>
+
+      <!--Hero text-->
+      <div class="Video_Text">
+        <h1>Joel Onarinde</h1>
+        <strong>
+          <p class="center quote">
+            <q>I connect people and technology by simplifying complex problems into practical solutions.</q>
+          </p>
+          <p class="center intro">
+            Hello! I’m Joel — an IT Administrator and creator. I keep systems running, build web content,
+            and share human-centred stories. Welcome to my portfolio.
+          </p>
+        </strong>
+        <p class="cta">
+          <a class="btn" href="#Contact">Work with me</a>
+          <a class="btn ghost" href="https://github.com/yinkajjj" target="_blank" rel="noopener">My GitHub</a>
+          <a class="btn youtube" href="https://www.youtube.com/shorts/Ymy9PDA_dQc" target="_blank" rel="noopener">Watch on YouTube</a>
+        </p>
+      </div>
+    </header>
+
+    <!--About section-->
+    <div class="Row" id="About">
+      <!--Left column-->
+      <div class="Column_2">
+        <img src="./img/it-setup-day.jpg" alt="Device imaging and setup day">
+      </div>
+      <!--Right column-->
+      <div class="Column_1">
+        <h1>About</h1>
+        <p>
+          I blend reliable IT operations with clear, human-centred communication. From Microsoft 365 admin,
+          device lifecycle and documentation to lightweight websites, graphics and short-form video —
+          I bring order and creativity together.
+        </p>
+        <ul class="bullets">
+          <li>Microsoft 365 • device imaging • security basics</li>
+          <li>HTML/CSS/JS • WordPress • content & visuals</li>
+          <li>Community and care storytelling</li>
+        </ul>
+      </div>
+    </div>
+
+    <!--GitHub section-->
+    <div class="Row" id="GitHub">
+      <!--Left column-->
+      <div class="Column_1">
+        <h1>GitHub</h1>
+        <p>You can view my coding projects on my GitHub profile here:</p>
+        <p class="center">
+          <a class="btn" href="https://github.com/yinkajjj" target="_blank" rel="noopener">github.com/yinkajjj</a>
+        </p>
+      </div>
+      <!--Right column-->
+      <div class="Column_2 logo-col">
+        <a href="https://github.com/yinkajjj" target="_blank" rel="noopener">
+          <img class="github-logo" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo">
+        </a>
+      </div>
+    </div>
+
+    <!--Video section (YouTube embed)-->
+    <div class="Row" id="Video">
+      <div class="Column_1">
+        <h1>Featured Video</h1>
+        <p class="muted">A quick highlight from my workflow.</p>
+        <div class="VideoEmbed">
+          <iframe
+            src="https://www.youtube.com/embed/Ymy9PDA_dQc?autoplay=1&mute=1&controls=0&modestbranding=1&playsinline=1&loop=1&playlist=Ymy9PDA_dQc"
+            title="Joel Onarinde — YouTube Short"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+      <div class="Column_2">
+        <img src="./img/creative-work.jpg" alt="Creative work and content">
+      </div>
+    </div>
+
+    <!--Contact section-->
+    <div class="Row" id="Contact">
+      <!--Contact image, left column-->
+      <div class="Column_2 Column_tall">
+        <img src="./img/creative-work.jpg" alt="Creative work">
+      </div>
+      <!--Contact form, right column-->
+      <div class="Column_1 Column_tall">
+        <h1>Contact</h1>
+        <form action="" method="POST">
+          <label>Name:
+            <input type="text" name="Name" placeholder="Please enter your name here" required>
+          </label>
+          <label>Email:
+            <input type="email" id="Email" name="Email" placeholder="Please enter your email here" required>
+          </label>
+          <label>Message:
+            <textarea id="Message" name="Message" rows="6" placeholder="Please write your message here" required></textarea>
+          </label>
+          <div class="actions">
+            <input class="btn" type="submit" value="SUBMIT">
+            <a class="btn ghost" href="https://uk.linkedin.com/in/joel-onarinde-4b5614ba" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!--Footer-->
+    <footer>
+      <p class="center">&copy; <span id="year"></span> Joel Onarinde · <a href="#Home">Back to top</a></p>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
